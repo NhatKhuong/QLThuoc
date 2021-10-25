@@ -24,7 +24,10 @@ public class App {
 //		
 //		ThuocDao dao = new ThuocDao(sessionFactory);
 //		System.out.println(dao.delete("DPAA000001"));
-		
+		//		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
+//		
+//		ThuocDao dao = new ThuocDao(sessionFactory);
+//		System.out.println(dao.delete("DPAA000001"));
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 				.configure()
 				.build();
