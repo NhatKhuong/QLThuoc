@@ -49,22 +49,18 @@ public class Thuoc {
 	
 	private int soLuongBanDau;
 	private Date hanSuDung;
+	@Override
+	public String toString() {
+		return "Thuoc [maThuoc=" + maThuoc + ", tenThuoc=" + tenThuoc + ", giaBan=" + giaBan + ", donViTinh="
+				+ donViTinh + ", thanhPhan=" + thanhPhan + ", quyCachDongGoi=" + quyCachDongGoi + ", dangBaoChe="
+				+ dangBaoChe + ", hamLuong=" + hamLuong + ", congTySanXuat=" + congTySanXuat + ", nuocSanXuat="
+				+ nuocSanXuat + ", trangThaiKinhDoanh=" + trangThaiKinhDoanh + ", thueVAT=" + thueVAT + ", soDangKy="
+				+ soDangKy + ", ct_HoaDons=" + ct_HoaDons + ", soLuongBanDau=" + soLuongBanDau + ", hanSuDung="
+				+ hanSuDung + "]";
+	}
 	
-//	[maThuoc]
-//		      ,[cTySanXuat]
-//		      ,[dangBaoChe]
-//		      ,[donViTinh]
-//		      ,[giaBan]
-//		      ,[hamLuong]
-//		      ,[hanSuDung]
-//		      ,[nuocSanXuat]
-//		      ,[quyCachDongGoi]
-//		      ,[soDK]
-//		      ,[soLuongBanDau]
-//		      ,[tenThuoc]
-//		      ,[thanhPhan]
-//		      ,[thueVAT]
-//		      ,[trangThaiKD]
-//		      ,[maCongDung]
+	
+	
+	
 
 }

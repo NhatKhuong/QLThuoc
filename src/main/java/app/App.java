@@ -20,43 +20,43 @@ import entity.Thuoc;
 
 public class App {
 	public static void main(String[] args) {
-//		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
+		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
+		
+		ThuocDao dao = new ThuocDao(sessionFactory);
+		System.out.println(dao.getThuocById("DPAA000001"));
+		
+//		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
+//				.configure()
+//				.build();
 //		
-//		ThuocDao dao = new ThuocDao(sessionFactory);
-//		System.out.println(dao.delete("DPAA000001"));
-		
-		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-				.configure()
-				.build();
-		
-		Metadata metadata = new MetadataSources(serviceRegistry)
-				.addAnnotatedClass(CongDung.class)
-				.addAnnotatedClass(CT_HoaDon.class)
-				.addAnnotatedClass(DiaChi.class)
-				.addAnnotatedClass(HoaDon.class)
-				.addAnnotatedClass(KhachHang.class)
-				.addAnnotatedClass(NhanVien.class)
-				.addAnnotatedClass(Thuoc.class)
-				.getMetadataBuilder()
-				.build();
-		
-		SessionFactory sessionFactory = metadata
-				.getSessionFactoryBuilder()
-				.build();
-		
-		Session session = sessionFactory.getCurrentSession();
-		Transaction tr = session.getTransaction();
-		
-		try {
-			
-			tr.begin();
-			
-			tr.commit();
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			tr.rollback();
-		}
+//		Metadata metadata = new MetadataSources(serviceRegistry)
+//				.addAnnotatedClass(CongDung.class)
+//				.addAnnotatedClass(CT_HoaDon.class)
+//				.addAnnotatedClass(DiaChi.class)
+//				.addAnnotatedClass(HoaDon.class)
+//				.addAnnotatedClass(KhachHang.class)
+//				.addAnnotatedClass(NhanVien.class)
+//				.addAnnotatedClass(Thuoc.class)
+//				.getMetadataBuilder()
+//				.build();
+//		
+//		SessionFactory sessionFactory = metadata
+//				.getSessionFactoryBuilder()
+//				.build();
+//		
+//		Session session = sessionFactory.getCurrentSession();
+//		Transaction tr = session.getTransaction();
+//		
+//		try {
+//			
+//			tr.begin();
+//			
+//			tr.commit();
+//			
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			tr.rollback();
+//		}
 	}
-	
+
 }

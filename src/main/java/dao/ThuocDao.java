@@ -33,4 +33,25 @@ public class ThuocDao{
 		return false;
 		
 	}
+	
+	public Thuoc getThuocById(String id) {
+		Session session = sessionFactory.getCurrentSession();
+		Transaction tr = session.getTransaction();
+		
+		try {
+			tr.begin();
+			
+			Thuoc thuoc = session.find(Thuoc.class,id);
+			tr.commit();
+			
+			return thuoc;
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			tr.rollback();
+		}
+		return null;
+		
+	}
 }
