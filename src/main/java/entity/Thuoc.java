@@ -55,9 +55,10 @@ public class Thuoc {
 				+ donViTinh + ", thanhPhan=" + thanhPhan + ", quyCachDongGoi=" + quyCachDongGoi + ", dangBaoChe="
 				+ dangBaoChe + ", hamLuong=" + hamLuong + ", congTySanXuat=" + congTySanXuat + ", nuocSanXuat="
 				+ nuocSanXuat + ", trangThaiKinhDoanh=" + trangThaiKinhDoanh + ", thueVAT=" + thueVAT + ", soDangKy="
-				+ soDangKy + ", ct_HoaDons=" + ct_HoaDons + ", soLuongBanDau=" + soLuongBanDau + ", hanSuDung="
-				+ hanSuDung + "]";
+				+ soDangKy + ", soLuongBanDau=" + soLuongBanDau + ", hanSuDung=" + hanSuDung + "]";
 	}
+
+	
 	
 	
 	

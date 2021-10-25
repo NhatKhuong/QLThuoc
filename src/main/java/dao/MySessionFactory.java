@@ -8,7 +8,12 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.service.ServiceRegistry;
 
+import entity.CT_HoaDon;
 import entity.CongDung;
+import entity.DiaChi;
+import entity.HoaDon;
+import entity.KhachHang;
+import entity.NhanVien;
 import entity.Thuoc;
 
 
@@ -23,7 +28,11 @@ public class MySessionFactory {
 		Metadata metadata = new MetadataSources(serviceRegistry)
 				.addAnnotatedClass(Thuoc.class)
 				.addAnnotatedClass(CongDung.class)
-
+				.addAnnotatedClass(CT_HoaDon.class)
+				.addAnnotatedClass(DiaChi.class)
+				.addAnnotatedClass(HoaDon.class)
+				.addAnnotatedClass(KhachHang.class)
+				.addAnnotatedClass(NhanVien.class)
 				.getMetadataBuilder()
 				.build();
 		
