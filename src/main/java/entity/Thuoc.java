@@ -17,33 +17,26 @@ public class Thuoc {
 	@Id
 //	@Column(columnDefinition = "nvarchar(30)")
 	private String maThuoc;
-	@Column(columnDefinition = "text")
 	private String tenThuoc;
 	@Column(columnDefinition = "money")
 	private Double giaBan;
 	private String donViTinh;
 	
-	@Column(columnDefinition = "text")
 	private String thanhPhan;
-	@Column(columnDefinition = "text")
 	private String quyCachDongGoi;
-	@Column(columnDefinition = "text")
 	private String dangBaoChe;
-	@Column(columnDefinition = "text")
 	private String hamLuong;
-	@Column(columnDefinition = "text", name = "cTySanXuat")
+	@Column(name = "cTySanXuat")
 	private String congTySanXuat;
-	@Column(columnDefinition = "text")
 	private String nuocSanXuat;
 	@Column(name = "trangThaiKD")
 	private boolean trangThaiKinhDoanh;
 	private float thueVAT;
-	@Column(columnDefinition = "text", name = "soDK")
+	@Column(name = "soDK")
 	private String soDangKy;
 	@ManyToOne
 	@JoinColumn(name = "maCongDung")
 	private CongDung congDung;
-	
 	@OneToMany(mappedBy = "thuoc")
 	private List<CT_HoaDon> ct_HoaDons;
 	

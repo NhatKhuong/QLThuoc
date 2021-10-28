@@ -24,10 +24,10 @@ public class KhachHangDao {
 		
 		Session session = sessionFactory.openSession();
 		Transaction tr = session.getTransaction();
-		if (txtSearch == null)
-			txtSearch = "";
-		if (gioiTinh == null)
-			gioiTinh = "";
+//		if (txtSearch == null)
+//			txtSearch = "";
+//		if (gioiTinh == null)
+//			gioiTinh = "";
 		int offset = page * limit;// lay du lieu bat dau tu vi tri page*20
 
 		try {
@@ -37,6 +37,7 @@ public class KhachHangDao {
 			String sql = "select * from KhachHang inner join DiaChi on  KhachHang.maDC = DiaChi.maDC where tenKhachHang like N'%"
 					+ txtSearch + "%' and gioiTinh like '%" + gioiTinh + "%'" + " order by maKhachHang desc "
 					+ " OFFSET " + offset + " ROWS FETCH NEXT "+limit+" ROWS ONLY";
+			System.out.println(sql);
 			
 			List<KhachHang> dsKhachHang =session.createNativeQuery(sql, KhachHang.class).getResultList();
 			

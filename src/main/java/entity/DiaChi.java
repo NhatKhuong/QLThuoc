@@ -11,13 +11,9 @@ import javax.persistence.Transient;
 @Entity
 public class DiaChi {
 	@Id
-	@Column(columnDefinition = "nvarchar(10)")
 	private String maDC;
-	@Column(columnDefinition = "nvarchar(255)")
 	private String tinhTp;
-	@Column(columnDefinition = "nvarchar(255)")
 	private String quanHuyen;
-	@Column(columnDefinition = "nvarchar(255)")
 	private String phuongXa;
 	
 //	@OneToMany(mappedBy = "diaChi")
