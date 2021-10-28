@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import javax.management.loading.PrivateClassLoader;
 
 import org.hibernate.Session;
@@ -51,6 +53,35 @@ public class ThuocDao{
 			// TODO: handle exception
 			tr.rollback();
 		}
+		return null;
+	}
+	
+	public List<Thuoc> danhSachThuoc(int page,
+			String tenThuoc, String thanhPhan, String dvt, String congDung, String nhomCongDung, String dangBaoChe, String nuoc){
+		Session session = sessionFactory.openSession();
+		Transaction tr = session.getTransaction();
+		try {
+			tr.begin();
+			int offset = page * 20;
+			String sql = "select * from Thuoc join CongDung on Thuoc.maCongDung  = CongDung.maCongDung "
+			+ "where tenThuoc like N'%"+tenThuoc+"%' "
+			+ "and congDung like N'%"+congDung+"%' "
+			+ "and donViTinh like N'%"+dvt+"%' "
+			+ "and nhomCongDung like N'%"+nhomCongDung+"%'"
+			+ "and dangBaoChe like N'%"+dangBaoChe+"%'"
+			+ "and nuocSanXuat like N'%"+nuoc+"%'"
+			+ "and thanhPhan like N'%"+thanhPhan+"%' order by Thuoc.tenThuoc offset "
+			+ offset + " rows fetch next 20 rows only";
+			List<Thuoc> thuoList = session.createNativeQuery(sql, Thuoc.class)
+					.getResultList();
+			
+			tr.commit();
+			return thuoList;
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		session.close();
 		return null;
 		
 	}

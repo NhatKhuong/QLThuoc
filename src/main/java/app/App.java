@@ -1,5 +1,7 @@
 package app;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -22,66 +24,15 @@ public class App {
 	public static void main(String[] args) {
 
 		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
-
-//		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
-//		
-//		ThuocDao dao = new ThuocDao(sessionFactory);
-//		System.out.println(dao.delete("DPAA000001"));
-		//		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
-//		
-//		ThuocDao dao = new ThuocDao(sessionFactory);
-//		System.out.println(dao.delete("DPAA000001"));
-//		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-//				.configure()
-//				.build();
-		
-//		Metadata metadata = new MetadataSources(serviceRegistry)
-//				.addAnnotatedClass(CongDung.class)
-//				.addAnnotatedClass(CT_HoaDon.class)
-//				.addAnnotatedClass(DiaChi.class)
-//				.addAnnotatedClass(HoaDon.class)
-//				.addAnnotatedClass(KhachHang.class)
-//				.addAnnotatedClass(NhanVien.class)
-//				.addAnnotatedClass(Thuoc.class)
-//				.getMetadataBuilder()
-//				.build();
-
-		
 		ThuocDao dao = new ThuocDao(sessionFactory);
-		System.out.println(dao.getThuocById("DPAA000001"));
+//		System.out.println(dao.getThuocById("DPAA000001"));
 		
-//		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-//				.configure()
-//				.build();
+		List<Thuoc> thuoList = dao.danhSachThuoc(2,"Atropin Sulfat"," "," "," "," "," "," ");
+		thuoList.forEach(thuoc->{
+			System.out.println(thuoc);
+		});
+		
 //		
-//		Metadata metadata = new MetadataSources(serviceRegistry)
-//				.addAnnotatedClass(CongDung.class)
-//				.addAnnotatedClass(CT_HoaDon.class)
-//				.addAnnotatedClass(DiaChi.class)
-//				.addAnnotatedClass(HoaDon.class)
-//				.addAnnotatedClass(KhachHang.class)
-//				.addAnnotatedClass(NhanVien.class)
-//				.addAnnotatedClass(Thuoc.class)
-//				.getMetadataBuilder()
-//				.build();
-//		
-//		SessionFactory sessionFactory = metadata
-//				.getSessionFactoryBuilder()
-//				.build();
-//		
-//		Session session = sessionFactory.getCurrentSession();
-//		Transaction tr = session.getTransaction();
-//		
-//		try {
-//			
-//			tr.begin();
-//			
-//			tr.commit();
-//			
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//			tr.rollback();
-//		}
 	}
 
 }
