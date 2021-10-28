@@ -13,8 +13,10 @@ public class CongDung {
 	@Column(columnDefinition = "nvarchar(30)")
 	private String maCongDung;
 	
-	@OneToMany(mappedBy = "congDung")
-	private List<Thuoc> thuocs;
+//	@OneToMany(mappedBy = "congDung")
+//	private List<Thuoc> thuocs;
+	
+	
 	@Column(columnDefinition = "text")
 	private String nhomCongDung;
 	@Column(columnDefinition = "text")
@@ -22,4 +24,29 @@ public class CongDung {
 	public CongDung() {
 		// TODO Auto-generated constructor stub
 	}
+	public CongDung(String maCongDung, String nhomCongDung, String congDung) {
+		super();
+		this.maCongDung = maCongDung;
+		this.nhomCongDung = nhomCongDung;
+		this.congDung = congDung;
+	}
+	public String getMaCongDung() {
+		return maCongDung;
+	}
+	public void setMaCongDung(String maCongDung) {
+		this.maCongDung = maCongDung;
+	}
+	public String getNhomCongDung() {
+		return nhomCongDung;
+	}
+	public void setNhomCongDung(String nhomCongDung) {
+		this.nhomCongDung = nhomCongDung;
+	}
+	public String getCongDung() {
+		return congDung;
+	}
+	public void setCongDung(String congDung) {
+		this.congDung = congDung;
+	}
+	
 }

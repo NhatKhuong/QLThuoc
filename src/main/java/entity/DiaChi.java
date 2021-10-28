@@ -20,15 +20,55 @@ public class DiaChi {
 	@Column(columnDefinition = "nvarchar(255)")
 	private String phuongXa;
 	
-	@OneToMany(mappedBy = "diaChi")
-	private List<NhanVien> nhanList;
+//	@OneToMany(mappedBy = "diaChi")
+//	private List<NhanVien> nhanList;
 	
-	@OneToMany(mappedBy = "diaChi")
-	private List<KhachHang> khList;
+//	@OneToMany(mappedBy = "diaChi")
+//	private List<KhachHang> khList;
 	
 	
 	public DiaChi() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public DiaChi(String maDC, String tinhTp, String quanHuyen, String phuongXa) {
+	super();
+	this.maDC = maDC;
+	this.tinhTp = tinhTp;
+	this.quanHuyen = quanHuyen;
+	this.phuongXa = phuongXa;
+}
+
+	public String getMaDC() {
+		return maDC;
+	}
+
+	public void setMaDC(String maDC) {
+		this.maDC = maDC;
+	}
+
+	public String getTinhTp() {
+		return tinhTp;
+	}
+
+	public void setTinhTp(String tinhTp) {
+		this.tinhTp = tinhTp;
+	}
+
+	public String getQuanHuyen() {
+		return quanHuyen;
+	}
+
+	public void setQuanHuyen(String quanHuyen) {
+		this.quanHuyen = quanHuyen;
+	}
+
+	public String getPhuongXa() {
+		return phuongXa;
+	}
+
+	public void setPhuongXa(String phuongXa) {
+		this.phuongXa = phuongXa;
 	}
 	
 }
