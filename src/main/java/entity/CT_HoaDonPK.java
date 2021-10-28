@@ -2,6 +2,7 @@ package entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
@@ -10,6 +11,7 @@ public class CT_HoaDonPK implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+//	@Column(columnDefinition = "nvarchar(255)")
 	private String thuoc;
 	private String hoaDon;
 	

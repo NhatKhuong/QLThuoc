@@ -31,7 +31,6 @@ public class HoaDon {
 	private NhanVien nhanVien;
 	
 	@OneToMany(mappedBy = "hoaDon")
-//	@Embedded
 	private List<CT_HoaDon> ct_HoaDons;
 	
 	public HoaDon() {

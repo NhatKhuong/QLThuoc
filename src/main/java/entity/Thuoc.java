@@ -16,18 +16,23 @@ import javax.persistence.OneToMany;
 public class Thuoc {
 	@Id
 //	@Column(columnDefinition = "nvarchar(30)")
+	
 	private String maThuoc;
+	@Column(columnDefinition = "nvarchar(255)")
 	private String tenThuoc;
 	@Column(columnDefinition = "money")
 	private Double giaBan;
 	private String donViTinh;
-	
+	@Column(columnDefinition = "nvarchar(255)")
 	private String thanhPhan;
+	@Column(columnDefinition = "nvarchar(255)")
 	private String quyCachDongGoi;
+	@Column(columnDefinition = "nvarchar(255)")
 	private String dangBaoChe;
 	private String hamLuong;
-	@Column(name = "cTySanXuat")
+	@Column(name = "cTySanXuat",columnDefinition = "nvarchar(255)")
 	private String congTySanXuat;
+	@Column(columnDefinition = "nvarchar(255)")
 	private String nuocSanXuat;
 	@Column(name = "trangThaiKD")
 	private boolean trangThaiKinhDoanh;
@@ -37,9 +42,6 @@ public class Thuoc {
 	@ManyToOne
 	@JoinColumn(name = "maCongDung")
 	private CongDung congDung;
-	
-	@OneToMany(mappedBy = "thuoc")
-	private List<CT_HoaDon> ct_HoaDons;
 	
 	private int soLuongBanDau;
 	private Date hanSuDung;

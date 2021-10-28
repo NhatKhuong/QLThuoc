@@ -17,9 +17,9 @@ public class CongDung {
 //	private List<Thuoc> thuocs;
 	
 	
-	@Column(columnDefinition = "text")
+	@Column(columnDefinition = "nvarchar(255)")
 	private String nhomCongDung;
-	@Column(columnDefinition = "text")
+	@Column(columnDefinition = "nvarchar(255)")
 	private String congDung;
 	public CongDung() {
 		// TODO Auto-generated constructor stub

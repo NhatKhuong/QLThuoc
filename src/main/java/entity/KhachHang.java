@@ -2,6 +2,7 @@ package entity;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -11,8 +12,9 @@ import javax.persistence.Transient;
 
 @Entity
 public class KhachHang {
-	@Id
+	@Id	
 	private String maKhachHang;
+	@Column(columnDefinition = "nvarchar(255)")
 	private String tenKhachHang;
 	private boolean gioiTinh;
 	private String soDienThoai;

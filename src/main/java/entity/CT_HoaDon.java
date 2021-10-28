@@ -18,7 +18,7 @@ public class CT_HoaDon {
 	
 	@Id
 	@ManyToOne
-	@JoinColumn(name = "maHoaDon")
+	@JoinColumn(name = "maHoaDonBan")
 	private HoaDon hoaDon;
 	
 	@Id
