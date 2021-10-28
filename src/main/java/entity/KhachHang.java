@@ -28,6 +28,12 @@ public class KhachHang {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "KhachHang [maKhachHang=" + maKhachHang + ", tenKhachHang=" + tenKhachHang + ", gioiTinh=" + gioiTinh
+				+ ", soDienThoai=" + soDienThoai + ", diaChi=" + diaChi + "]";
+	}
+
 	public KhachHang(String maKhachHang, String tenKhachHang, boolean gioiTinh, String soDienThoai, DiaChi diaChi) {
 		super();
 		this.maKhachHang = maKhachHang;

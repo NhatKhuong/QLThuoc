@@ -31,6 +31,14 @@ public class DiaChi {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	@Override
+	public String toString() {
+		return "DiaChi [maDC=" + maDC + ", tinhTp=" + tinhTp + ", quanHuyen=" + quanHuyen + ", phuongXa=" + phuongXa
+				+ "]";
+	}
+
+
 	public DiaChi(String maDC, String tinhTp, String quanHuyen, String phuongXa) {
 	super();
 	this.maDC = maDC;
