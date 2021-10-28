@@ -12,6 +12,7 @@ import javax.persistence.Transient;
 public class NhanVien {
 	@Id
 	private String maNhanVien;
+	@Column(columnDefinition = "nvarchar(255)")
 	private String tenNhanVien;
 	private boolean gioiTinh;
 	@Column(columnDefinition = "nvarchar(11)")
