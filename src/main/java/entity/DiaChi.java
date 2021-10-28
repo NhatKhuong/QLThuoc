@@ -11,13 +11,9 @@ import javax.persistence.Transient;
 @Entity
 public class DiaChi {
 	@Id
-	@Column(columnDefinition = "nvarchar(10)")
 	private String maDC;
-	@Column(columnDefinition = "nvarchar(255)")
 	private String tinhTp;
-	@Column(columnDefinition = "nvarchar(255)")
 	private String quanHuyen;
-	@Column(columnDefinition = "nvarchar(255)")
 	private String phuongXa;
 	
 //	@OneToMany(mappedBy = "diaChi")
@@ -30,6 +26,14 @@ public class DiaChi {
 	public DiaChi() {
 		// TODO Auto-generated constructor stub
 	}
+
+	
+	@Override
+	public String toString() {
+		return "DiaChi [maDC=" + maDC + ", tinhTp=" + tinhTp + ", quanHuyen=" + quanHuyen + ", phuongXa=" + phuongXa
+				+ "]";
+	}
+
 
 	public DiaChi(String maDC, String tinhTp, String quanHuyen, String phuongXa) {
 	super();

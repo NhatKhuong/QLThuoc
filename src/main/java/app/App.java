@@ -27,12 +27,11 @@ public class App {
 		ThuocDao dao = new ThuocDao(sessionFactory);
 //		System.out.println(dao.getThuocById("DPAA000001"));
 		
-		List<Thuoc> thuoList = dao.danhSachThuoc(2,"Atropin Sulfat"," "," "," "," "," "," ");
-		thuoList.forEach(thuoc->{
-			System.out.println(thuoc);
-		});
+//		List<Thuoc> thuoList = dao.danhSachThuoc(2,"Atropin Sulfat"," "," "," "," "," "," ");
+//		thuoList.forEach(thuoc->{
+//			System.out.println(thuoc);
+//		});
 		
-//		
 	}
 
 }

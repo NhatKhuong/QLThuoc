@@ -72,6 +72,7 @@ public class ThuocDao{
 			+ "and nuocSanXuat like N'%"+nuoc+"%'"
 			+ "and thanhPhan like N'%"+thanhPhan+"%' order by Thuoc.tenThuoc offset "
 			+ offset + " rows fetch next 20 rows only";
+			System.out.println(sql);
 			List<Thuoc> thuoList = session.createNativeQuery(sql, Thuoc.class)
 					.getResultList();
 			
@@ -85,4 +86,5 @@ public class ThuocDao{
 		return null;
 		
 	}
+	
 }
