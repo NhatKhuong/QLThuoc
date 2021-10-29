@@ -53,6 +53,130 @@ public class Thuoc {
 				+ nuocSanXuat + ", trangThaiKinhDoanh=" + trangThaiKinhDoanh + ", thueVAT=" + thueVAT + ", soDangKy="
 				+ soDangKy + ", soLuongBanDau=" + soLuongBanDau + ", hanSuDung=" + hanSuDung + "]";
 	}
+	public Thuoc(String maThuoc, String tenThuoc, Double giaBan, String donViTinh, String thanhPhan,
+			String quyCachDongGoi, String dangBaoChe, String hamLuong, String congTySanXuat, String nuocSanXuat,
+			boolean trangThaiKinhDoanh, float thueVAT, String soDangKy, CongDung congDung, int soLuongBanDau,
+			Date hanSuDung) {
+		super();
+		this.maThuoc = maThuoc;
+		this.tenThuoc = tenThuoc;
+		this.giaBan = giaBan;
+		this.donViTinh = donViTinh;
+		this.thanhPhan = thanhPhan;
+		this.quyCachDongGoi = quyCachDongGoi;
+		this.dangBaoChe = dangBaoChe;
+		this.hamLuong = hamLuong;
+		this.congTySanXuat = congTySanXuat;
+		this.nuocSanXuat = nuocSanXuat;
+		this.trangThaiKinhDoanh = trangThaiKinhDoanh;
+		this.thueVAT = thueVAT;
+		this.soDangKy = soDangKy;
+		this.congDung = congDung;
+		this.soLuongBanDau = soLuongBanDau;
+		this.hanSuDung = hanSuDung;
+	}
+	public Thuoc() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getMaThuoc() {
+		return maThuoc;
+	}
+	public void setMaThuoc(String maThuoc) {
+		this.maThuoc = maThuoc;
+	}
+	public String getTenThuoc() {
+		return tenThuoc;
+	}
+	public void setTenThuoc(String tenThuoc) {
+		this.tenThuoc = tenThuoc;
+	}
+	public Double getGiaBan() {
+		return giaBan;
+	}
+	public void setGiaBan(Double giaBan) {
+		this.giaBan = giaBan;
+	}
+	public String getDonViTinh() {
+		return donViTinh;
+	}
+	public void setDonViTinh(String donViTinh) {
+		this.donViTinh = donViTinh;
+	}
+	public String getThanhPhan() {
+		return thanhPhan;
+	}
+	public void setThanhPhan(String thanhPhan) {
+		this.thanhPhan = thanhPhan;
+	}
+	public String getQuyCachDongGoi() {
+		return quyCachDongGoi;
+	}
+	public void setQuyCachDongGoi(String quyCachDongGoi) {
+		this.quyCachDongGoi = quyCachDongGoi;
+	}
+	public String getDangBaoChe() {
+		return dangBaoChe;
+	}
+	public void setDangBaoChe(String dangBaoChe) {
+		this.dangBaoChe = dangBaoChe;
+	}
+	public String getHamLuong() {
+		return hamLuong;
+	}
+	public void setHamLuong(String hamLuong) {
+		this.hamLuong = hamLuong;
+	}
+	public String getCongTySanXuat() {
+		return congTySanXuat;
+	}
+	public void setCongTySanXuat(String congTySanXuat) {
+		this.congTySanXuat = congTySanXuat;
+	}
+	public String getNuocSanXuat() {
+		return nuocSanXuat;
+	}
+	public void setNuocSanXuat(String nuocSanXuat) {
+		this.nuocSanXuat = nuocSanXuat;
+	}
+	public boolean isTrangThaiKinhDoanh() {
+		return trangThaiKinhDoanh;
+	}
+	public void setTrangThaiKinhDoanh(boolean trangThaiKinhDoanh) {
+		this.trangThaiKinhDoanh = trangThaiKinhDoanh;
+	}
+	public float getThueVAT() {
+		return thueVAT;
+	}
+	public void setThueVAT(float thueVAT) {
+		this.thueVAT = thueVAT;
+	}
+	public String getSoDangKy() {
+		return soDangKy;
+	}
+	public void setSoDangKy(String soDangKy) {
+		this.soDangKy = soDangKy;
+	}
+	public CongDung getCongDung() {
+		return congDung;
+	}
+	public void setCongDung(CongDung congDung) {
+		this.congDung = congDung;
+	}
+	public int getSoLuongBanDau() {
+		return soLuongBanDau;
+	}
+	public void setSoLuongBanDau(int soLuongBanDau) {
+		this.soLuongBanDau = soLuongBanDau;
+	}
+	public Date getHanSuDung() {
+		return hanSuDung;
+	}
+	public void setHanSuDung(Date hanSuDung) {
+		this.hanSuDung = hanSuDung;
+	}
+	
+	
+	
 
 	
 	

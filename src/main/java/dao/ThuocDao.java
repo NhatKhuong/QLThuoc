@@ -56,6 +56,23 @@ public class ThuocDao{
 		return null;
 	}
 	
+	public boolean update(Thuoc newThuoc) {
+		Session session = sessionFactory.getCurrentSession();
+		Transaction tr = session.getTransaction();
+		try {
+			
+			tr.begin();
+			session.update(newThuoc);
+			tr.commit();
+			return true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			tr.rollback();
+		}
+		return false;
+	}
+	
 	public List<Thuoc> danhSachThuoc(int page,
 			String tenThuoc, String thanhPhan, String dvt, String congDung, String nhomCongDung, String dangBaoChe, String nuoc){
 		Session session = sessionFactory.openSession();
@@ -80,11 +97,32 @@ public class ThuocDao{
 			return thuoList;
 		} catch (Exception e) {
 			// TODO: handle exception
+			tr.rollback();
 			e.printStackTrace();
 		}
 		session.close();
 		return null;
 		
 	}
+	
+//	public boolean setTrangThaiKinhDoanh(String id, boolean tt) {
+//		Session session = sessionFactory.getCurrentSession();
+//		Transaction tr = session.getTransaction();
+//		try {
+//			
+//			tr.begin();
+//			
+//			int n = tt==true?1:0;
+//			String sql="update Thuoc set trangThaiKD = 1 where maThuoc = '"+id+"'";
+//			session.crea
+//			tr.commit();
+//			return true;
+//			
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			tr.rollback();
+//		}
+//		return false;
+//	}
 	
 }

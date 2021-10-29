@@ -27,10 +27,22 @@ public class App {
 		ThuocDao dao = new ThuocDao(sessionFactory);
 //		System.out.println(dao.getThuocById("DPAA000001"));
 		
-		List<Thuoc> thuoList = dao.danhSachThuoc(0,"Atropin Sulfat","","","","","","");
-		thuoList.forEach(thuoc->{
-			System.out.println(thuoc);
-		});
+//		Thuoc thuoc = dao.getThuocById("DPAA000001");
+//		System.out.println(thuoc);
+//		thuoc.setNuocSanXuat("Mỹ");
+//		thuoc.setSoLuongBanDau(50);
+//		System.out.println(dao.update(thuoc));
+//		System.out.println(thuoc);
+//		System.out.println(dao.getThuocById("DPAA000001"));
+//		System.out.println(dao.setTrangThaiKinhDoanh("DPAA000001", true));
+//		System.out.println(dao.getThuocById("DPAA000001"));
+		
+		
+		
+//		List<Thuoc> thuoList = dao.danhSachThuoc(0,"Atropin Sulfat","","","","","","");
+//		thuoList.forEach(thuoc->{
+//			System.out.println(thuoc);
+//		});
 		
 	}
 
