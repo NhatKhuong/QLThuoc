@@ -1,18 +1,16 @@
 package dao;
 
-import java.sql.Connection;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import entity.DiaChi;
 import entity.KhachHang;
 
 public class KhachHangDao {
 	private SessionFactory sessionFactory;
-	final private int limit = 2;
+	final private int limit = 5;
 
 	public KhachHangDao(SessionFactory sessionFactory) {
 		super();
@@ -20,7 +18,6 @@ public class KhachHangDao {
 	}
 
 	public List<KhachHang> danhSachKhachHang(int page, String txtSearch, String gioiTinh) {
-
 		Session session = sessionFactory.openSession();
 		Transaction tr = session.getTransaction();
 		if (txtSearch == null)
@@ -35,7 +32,6 @@ public class KhachHangDao {
 			String sql = "select * from KhachHang inner join DiaChi on  KhachHang.maDC = DiaChi.maDC where tenKhachHang like N'%"
 					+ txtSearch + "%' and gioiTinh like '%" + gioiTinh + "%'" + " order by maKhachHang desc "
 					+ " OFFSET " + offset + " ROWS FETCH NEXT " + limit + " ROWS ONLY";
-//			System.out.println(sql);
 
 			List<KhachHang> dsKhachHang = session.createNativeQuery(sql, KhachHang.class).getResultList();
 
@@ -119,13 +115,11 @@ public class KhachHangDao {
 	public boolean kiemTraSoDienThoai(String sdt) {
 		return layThongTinKhachHangQuaSDT(sdt) == null ? true : false;
 	}
-	public static void main(String[] args) {
-		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
-		KhachHangDao khachHangDao = new KhachHangDao(sessionFactory);
+//	public static void main(String[] args) {
+//		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
+//		KhachHangDao khachHangDao = new KhachHangDao(sessionFactory);
 //		khachHangDao.danhSachKhachHang(0, "", "").forEach(e -> {
 //			System.out.println(e);
 //		});
-//		System.out.println(khachHangDao.suaKhachHang(new KhachHang("KHAA000001", "Son test", false, "0000",new DiaChi("DC-0000012",null,null,null))));
-		System.out.println(khachHangDao.kiemTraSoDienThoai("03945664612"));
-	}
+//	}
 }

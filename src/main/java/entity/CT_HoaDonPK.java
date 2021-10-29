@@ -11,10 +11,8 @@ public class CT_HoaDonPK implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-<<<<<<< HEAD
-=======
 //	@Column(columnDefinition = "nvarchar(255)")
->>>>>>> f14d4d3070d242820c9183c8bd24ff6d00a2b2e8
+
 	private String thuoc;
 	private String hoaDon;
 	

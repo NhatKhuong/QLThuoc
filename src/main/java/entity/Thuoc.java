@@ -44,11 +44,7 @@ public class Thuoc {
 	@ManyToOne
 	@JoinColumn(name = "maCongDung")
 	private CongDung congDung;
-<<<<<<< HEAD
-//	@OneToMany(mappedBy = "thuoc")
-//	private List<CT_HoaDon> ct_HoaDons;
-=======
->>>>>>> f14d4d3070d242820c9183c8bd24ff6d00a2b2e8
+
 	
 	private int soLuongBanDau;
 	private Date hanSuDung;
