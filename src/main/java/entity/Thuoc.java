@@ -22,6 +22,7 @@ public class Thuoc {
 	private String tenThuoc;
 	@Column(columnDefinition = "money")
 	private Double giaBan;
+	@Column(columnDefinition = "nvarchar(255)")
 	private String donViTinh;
 	@Column(columnDefinition = "nvarchar(255)")
 	private String thanhPhan;
@@ -29,6 +30,7 @@ public class Thuoc {
 	private String quyCachDongGoi;
 	@Column(columnDefinition = "nvarchar(255)")
 	private String dangBaoChe;
+	@Column(columnDefinition = "nvarchar(255)")
 	private String hamLuong;
 	@Column(name = "cTySanXuat",columnDefinition = "nvarchar(255)")
 	private String congTySanXuat;
