@@ -25,12 +25,12 @@ public class App {
 
 		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
 		ThuocDao dao = new ThuocDao(sessionFactory);
-//		System.out.println(dao.getThuocById("DPAA000001"));
-		
-//		List<Thuoc> thuoList = dao.danhSachThuoc(2,"Atropin Sulfat"," "," "," "," "," "," ");
-//		thuoList.forEach(thuoc->{
-//			System.out.println(thuoc);
-//		});
+////		System.out.println(dao.getThuocById("DPAA000001"));
+//		
+		List<Thuoc> thuoList = dao.danhSachThuoc(2,"Atropin Sulfat"," "," "," "," "," "," ");
+		thuoList.forEach(thuoc->{
+			System.out.println(thuoc);
+		});
 		
 	}
 

@@ -11,7 +11,6 @@ public class CT_HoaDonPK implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	@Column(columnDefinition = "nvarchar(255)")
 	private String thuoc;
 	private String hoaDon;
 	

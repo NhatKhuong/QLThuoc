@@ -21,14 +21,27 @@ public class NhanVien {
 	private boolean trangThaiLamViec;
 	private String cmnd;
 	private boolean loaiNV;
-	
-	
-	@OneToMany(mappedBy = "nhanVien")
-	private List<HoaDon> hoaDons;
+
+//	@OneToMany(mappedBy = "nhanVien")
+//	private List<HoaDon> hoaDons;
 	
 	@ManyToOne
 	@JoinColumn(name = "maDC")
 	private DiaChi diaChi;
+
+	public NhanVien(String maNhanVien, String tenNhanVien, boolean gioiTinh, String soDienThoaiNV, String passLogin,
+			boolean trangThaiLamViec, String cmnd, boolean loaiNV, DiaChi diaChi) {
+		super();
+		this.maNhanVien = maNhanVien;
+		this.tenNhanVien = tenNhanVien;
+		this.gioiTinh = gioiTinh;
+		this.soDienThoaiNV = soDienThoaiNV;
+		this.passLogin = passLogin;
+		this.trangThaiLamViec = trangThaiLamViec;
+		this.cmnd = cmnd;
+		this.loaiNV = loaiNV;
+		this.diaChi = diaChi;
+	}
 
 	public NhanVien() {
 		// TODO Auto-generated constructor stub
@@ -97,15 +110,6 @@ public class NhanVien {
 	public void setLoaiNV(boolean loaiNV) {
 		this.loaiNV = loaiNV;
 	}
-
-	public List<HoaDon> getHoaDons() {
-		return hoaDons;
-	}
-
-	public void setHoaDons(List<HoaDon> hoaDons) {
-		this.hoaDons = hoaDons;
-	}
-
 	public DiaChi getDiaChi() {
 		return diaChi;
 	}

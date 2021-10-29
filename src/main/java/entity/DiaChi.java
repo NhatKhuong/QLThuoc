@@ -11,7 +11,6 @@ import javax.persistence.Transient;
 @Entity
 public class DiaChi {
 	@Id
-
 	private String maDC;
 	@Column(columnDefinition = "nvarchar(255)")
 	private String tinhTp;
@@ -20,15 +19,18 @@ public class DiaChi {
 	@Column(columnDefinition = "nvarchar(255)")
 	private String phuongXa;
 	
-//	@OneToMany(mappedBy = "diaChi")S
-//	private List<NhanVien> nhanList;
-	
-//	@OneToMany(mappedBy = "diaChi")
-//	private List<KhachHang> khList;
+	@OneToMany(mappedBy = "diaChi")
+	private List<NhanVien> nhanList;	
+	@OneToMany(mappedBy = "diaChi")
+	private List<KhachHang> khList;
 	
 	
 	public DiaChi() {
 		// TODO Auto-generated constructor stub
+	}
+	public DiaChi(String maDC) {
+		// TODO Auto-generated constructor stub
+		this.maDC = maDC;
 	}
 
 	

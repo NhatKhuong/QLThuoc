@@ -1,5 +1,7 @@
 package entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -14,11 +16,11 @@ import javax.persistence.Table;
 //@Embeddable
 @Table(name = "CT_HoaDonBan")
 @IdClass(CT_HoaDonPK.class)
-public class CT_HoaDon {
+public class CT_HoaDon implements  Serializable{
 	
 	@Id
 	@ManyToOne
-	@JoinColumn(name = "maHoaDon")
+	@JoinColumn(name = "maHoaDonBan")
 	private HoaDon hoaDon;
 	
 	@Id
