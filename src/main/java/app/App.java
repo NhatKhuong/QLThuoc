@@ -10,6 +10,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.service.ServiceRegistry;
 
+import dao.HoaDonDao;
 import dao.MySessionFactory;
 import dao.ThuocDao;
 import entity.CT_HoaDon;
@@ -25,7 +26,8 @@ public class App {
 
 		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
 		ThuocDao dao = new ThuocDao(sessionFactory);
-//		System.out.println(dao.getThuocById("DPAA000001"));
+		HoaDonDao daoHoaDon = new HoaDonDao(sessionFactory);
+//		System.out.println(dao.getThuocById("DPAA000002"));
 		
 //		Thuoc thuoc = dao.getThuocById("DPAA000001");
 //		System.out.println(thuoc);
@@ -38,11 +40,18 @@ public class App {
 //		System.out.println(dao.getThuocById("DPAA000001"));
 		
 		
-		
-//		List<Thuoc> thuoList = dao.danhSachThuoc(0,"Atropin Sulfat","","","","","","");
+//		List<Thuoc> thuoList = dao.danhSachThuoc(0,"A","","","","","","");
 //		thuoList.forEach(thuoc->{
 //			System.out.println(thuoc);
 //		});
+		
+//		System.out.println(daoHoaDon.getHoaDonById("BTAA000001"));
+		daoHoaDon.getDanhSachHoaDon("","A","","","", 0, 0)
+		.forEach(item->{
+			System.out.println(item);
+		});
+		
+		
 		
 	}
 

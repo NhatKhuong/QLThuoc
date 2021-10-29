@@ -37,4 +37,63 @@ public class HoaDon {
 		// TODO Auto-generated constructor stub
 	}
 
+	public String getMaHoaDonBan() {
+		return maHoaDonBan;
+	}
+
+	public void setMaHoaDonBan(String maHoaDonBan) {
+		this.maHoaDonBan = maHoaDonBan;
+	}
+
+	public Date getNgayLapHDBan() {
+		return ngayLapHDBan;
+	}
+
+	public void setNgayLapHDBan(Date ngayLapHDBan) {
+		this.ngayLapHDBan = ngayLapHDBan;
+	}
+
+	public double getTienNhan() {
+		return tienNhan;
+	}
+
+	public void setTienNhan(double tienNhan) {
+		this.tienNhan = tienNhan;
+	}
+
+	public KhachHang getKhachHang() {
+		return khachHang;
+	}
+
+	public void setKhachHang(KhachHang khachHang) {
+		this.khachHang = khachHang;
+	}
+
+	public NhanVien getNhanVien() {
+		return nhanVien;
+	}
+
+	public void setNhanVien(NhanVien nhanVien) {
+		this.nhanVien = nhanVien;
+	}
+
+	public List<CT_HoaDon> getCt_HoaDons() {
+		return ct_HoaDons;
+	}
+
+	public void setCt_HoaDons(List<CT_HoaDon> ct_HoaDons) {
+		this.ct_HoaDons = ct_HoaDons;
+	}
+
+	@Override
+	public String toString() {
+		return "HoaDon [maHoaDonBan=" + maHoaDonBan + ", ngayLapHDBan=" + ngayLapHDBan + ", tienNhan=" + tienNhan + "]";
+	}
+
+	
+
+
+	
+	
+
 }

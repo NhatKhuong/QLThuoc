@@ -53,6 +53,7 @@ public class ThuocDao{
 			// TODO: handle exception
 			tr.rollback();
 		}
+		session.close();
 		return null;
 	}
 	
@@ -70,6 +71,7 @@ public class ThuocDao{
 			// TODO: handle exception
 			tr.rollback();
 		}
+		session.close();
 		return false;
 	}
 	
@@ -105,24 +107,22 @@ public class ThuocDao{
 		
 	}
 	
-//	public boolean setTrangThaiKinhDoanh(String id, boolean tt) {
-//		Session session = sessionFactory.getCurrentSession();
-//		Transaction tr = session.getTransaction();
-//		try {
-//			
-//			tr.begin();
-//			
-//			int n = tt==true?1:0;
-//			String sql="update Thuoc set trangThaiKD = 1 where maThuoc = '"+id+"'";
-//			session.crea
-//			tr.commit();
-//			return true;
-//			
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//			tr.rollback();
-//		}
-//		return false;
-//	}
+	public boolean setTrangThaiKinhDoanh(String id, boolean tt) {
+		Thuoc thuoc = getThuocById(id);
+		System.out.println("in"+thuoc);
+		if(thuoc == null) {
+			return false;
+		}
+		else {		
+			try {
+				thuoc.setTrangThaiKinhDoanh(tt);
+				return update(thuoc);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return false;
+		}
+	}
 	
 }
