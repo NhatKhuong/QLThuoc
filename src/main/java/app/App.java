@@ -10,6 +10,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.service.ServiceRegistry;
 
+import dao.HoaDonDao;
 import dao.MySessionFactory;
 import dao.ThuocDao;
 import entity.CT_HoaDon;
@@ -25,12 +26,41 @@ public class App {
 
 		SessionFactory sessionFactory = new MySessionFactory().getSessionFactory();
 		ThuocDao dao = new ThuocDao(sessionFactory);
+<<<<<<< HEAD
 ////		System.out.println(dao.getThuocById("DPAA000001"));
 //		
 		List<Thuoc> thuoList = dao.danhSachThuoc(2,"Atropin Sulfat"," "," "," "," "," "," ");
 		thuoList.forEach(thuoc->{
 			System.out.println(thuoc);
 		});
+=======
+		HoaDonDao daoHoaDon = new HoaDonDao(sessionFactory);
+//		System.out.println(dao.getThuocById("DPAA000002"));
+		
+//		Thuoc thuoc = dao.getThuocById("DPAA000001");
+//		System.out.println(thuoc);
+//		thuoc.setNuocSanXuat("Mỹ");
+//		thuoc.setSoLuongBanDau(50);
+//		System.out.println(dao.update(thuoc));
+//		System.out.println(thuoc);
+//		System.out.println(dao.getThuocById("DPAA000001"));
+//		System.out.println(dao.setTrangThaiKinhDoanh("DPAA000001", true));
+//		System.out.println(dao.getThuocById("DPAA000001"));
+		
+		
+//		List<Thuoc> thuoList = dao.danhSachThuoc(0,"A","","","","","","");
+//		thuoList.forEach(thuoc->{
+//			System.out.println(thuoc);
+//		});
+>>>>>>> f14d4d3070d242820c9183c8bd24ff6d00a2b2e8
+		
+//		System.out.println(daoHoaDon.getHoaDonById("BTAA000001"));
+		daoHoaDon.getDanhSachHoaDon("","A","","","", 0, 0)
+		.forEach(item->{
+			System.out.println(item);
+		});
+		
+		
 		
 	}
 

@@ -53,7 +53,26 @@ public class ThuocDao{
 			// TODO: handle exception
 			tr.rollback();
 		}
+		session.close();
 		return null;
+	}
+	
+	public boolean update(Thuoc newThuoc) {
+		Session session = sessionFactory.getCurrentSession();
+		Transaction tr = session.getTransaction();
+		try {
+			
+			tr.begin();
+			session.update(newThuoc);
+			tr.commit();
+			return true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			tr.rollback();
+		}
+		session.close();
+		return false;
 	}
 	
 	public List<Thuoc> danhSachThuoc(int page,
@@ -80,11 +99,30 @@ public class ThuocDao{
 			return thuoList;
 		} catch (Exception e) {
 			// TODO: handle exception
+			tr.rollback();
 			e.printStackTrace();
 		}
 		session.close();
 		return null;
 		
+	}
+	
+	public boolean setTrangThaiKinhDoanh(String id, boolean tt) {
+		Thuoc thuoc = getThuocById(id);
+		System.out.println("in"+thuoc);
+		if(thuoc == null) {
+			return false;
+		}
+		else {		
+			try {
+				thuoc.setTrangThaiKinhDoanh(tt);
+				return update(thuoc);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return false;
+		}
 	}
 	
 }
